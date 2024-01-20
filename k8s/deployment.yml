@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: micro3
-        image: mauron/mcloud1:1
+        image: mauron/mcloud1:2a
         ports:
         - containerPort: 8080
 
