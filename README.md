@@ -22,8 +22,10 @@ git pull (en la carpeta)
 # Construir la imagen
 docker build . -t NOMBRE:TAG
 
-# Subir la imagen
+# Tagging la imagen con el registry
 docker tag NOMBRE:TAG DOCKERHUB/NOMBRE:TAG
+
+# Subir la imagen
 docker push DOCKERHUB/NOMBRE:TAG
 
 
