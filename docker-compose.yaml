@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  micro1:
+    image: sabadodev.azurecr.io/demo-micro-rb:1
+    container_name: micro3
+    ports:
+      - "7008:8080"
+    volumes:
+      - /home/azureuser/html:/data
+
