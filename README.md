@@ -28,4 +28,14 @@ docker tag NOMBRE:TAG DOCKERHUB/NOMBRE:TAG
 # Subir la imagen
 docker push DOCKERHUB/NOMBRE:TAG
 
+# Taggin de la imagen en otro registry
+
+docker tag NOMBRE:TAG sabadodev.azurecr.io/NOMBRE:TAG
+
+# Subir la imagen
+docker login sabadodev.azurecr.io
+user: sabadodev
+pwd: 2QBtwiiwWjBt6FZFi+bWFS3RWSWhi+hZEtcqHmYIPd+ACRD+gwcA
+
+docker push sabadodev.azurecr.io/NOMBRE:TAG
 
