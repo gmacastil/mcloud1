@@ -5,7 +5,7 @@ services:
     image: sabadodev.azurecr.io/demo-micro-rb:1
     container_name: micro1
     ports:
-      - "7008:8080"
+      - "7001:8080"
     volumes:
       - /home/azureuser/html:/data
 
