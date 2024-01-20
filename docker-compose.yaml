@@ -11,7 +11,7 @@ services:
     environment:
       - TZ=America/Bogota
       - ENV=prd
-      - HOST=12.12.12.02
+      - HOST=micro3
     networks:
       - micros
 
