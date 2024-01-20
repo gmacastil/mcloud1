@@ -1,3 +1,3 @@
-FROM openjdk:17.0.20-slim
+FROM openjdk:17-alpine
 COPY target/*.jar micro.jar
 CMD [ "java","-jar","micro.jar" ]
