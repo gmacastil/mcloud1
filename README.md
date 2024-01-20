@@ -14,6 +14,9 @@ cd NOMBRE
 # clonar repo
 git clone https://github.com/gmacastil/mcloud1.git
 
+# actualizar repo
+git pull (en la carpeta)
+
 # Compilar (omitir)
 
 # Construir la imagen
