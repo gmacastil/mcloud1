@@ -2,14 +2,14 @@ version: '3'
 
 services:
   micro1:
-    image: sabadodev.azurecr.io/demo-micro-rb:1
+    image: mauron/mcloud1:2a
     container_name: micro1
     ports:
       - "7001:8080"
-      - "7002:8080"
     volumes:
       - /home/azureuser/html:/data
-      - /home/azureuser/html:/data1
     environment:
       - TZ=America/Bogota
+      - ENV=desa
+      - HOST=10.2.2.2
 
