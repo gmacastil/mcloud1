@@ -10,6 +10,13 @@ services:
       - /home/azureuser/html:/data
     environment:
       - TZ=America/Bogota
-      - ENV=desa
-      - HOST=10.2.2.2
+      - ENV=prd
+      - HOST=12.12.12.02
+    networks:
+      - micros
 
+networks:
+  micros:
+   name: micros
+   external: true
+  
