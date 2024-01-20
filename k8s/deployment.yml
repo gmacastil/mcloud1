@@ -18,4 +18,8 @@ spec:
         image: mauron/mcloud1:2a
         ports:
         - containerPort: 8080
-
+        env:
+        - name: ENV
+          value: "desarrollo"
+        - name: HOST
+          value: "microX"
