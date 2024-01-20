@@ -22,4 +22,4 @@ spec:
         - name: ENV
           value: "desarrollo"
         - name: HOST
-          value: "microX"
+          value: "desarrollo"
