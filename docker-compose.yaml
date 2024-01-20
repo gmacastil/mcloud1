@@ -3,7 +3,7 @@ version: '3'
 services:
   micro1:
     image: sabadodev.azurecr.io/demo-micro-rb:1
-    container_name: micro3
+    container_name: micro1
     ports:
       - "7008:8080"
     volumes:
