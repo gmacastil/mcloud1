@@ -7,3 +7,9 @@ data:
    ENV: "pre-prod"
    HOST: "nodeport"
    TZ: "America/Bogota"
+   
+   data.json: |
+     {
+       "ciudad": "bogota",
+       "curso": "kubernetes"
+     }

@@ -21,4 +21,11 @@ spec:
         envFrom:
         - configMapRef:
             name: micro3-cfg
-
+        volumeMounts:
+        - name: config-json
+          mountPath: /archivo.json
+      
+      volumes:
+      - name: config-json
+        configMap:
+           name: micro3-cfg
