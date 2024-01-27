@@ -22,4 +22,11 @@ spec:
         envFrom:
         - configMapRef:
             name: micro3-cfg
-
+        volumeMounts:
+        - name: pvc-micro
+          mountPath: /vol
+    
+      volumes:
+      - name: pvc-micro
+        persistentVolumeClaim:
+          claimName: local-pvc
