@@ -20,6 +20,18 @@ spec:
         - containerPort: 8080
         env:
         - name: ENV
-          value: "pre-prod"
+          valueFrom:
+            configMapKeyRef:
+              name: micro3-cfg
+              key: "ENV"
         - name: HOST
-          value: "nodeport"
+          valueFrom:
+            configMapKeyRef:
+              name: micro3-cfg
+              key: "HOST"
+        - name: TZ
+          valueFrom:
+            configMapKeyRef:
+              name: micro3-cfg
+              key: "TZ"
+

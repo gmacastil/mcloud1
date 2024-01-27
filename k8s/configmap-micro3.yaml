@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+   name: micro3-cfg
+   namespace: sabado
+data:
+   ENV: "pre-prod"
+   HOST: "nodeport"
+   TZ: "America/Bogota"
