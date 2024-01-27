@@ -20,5 +20,5 @@ spec:
         - containerPort: 8080
         envFrom:
         - configMapRef:
-          name: micro3-cfg
+            name: micro3-cfg
 
