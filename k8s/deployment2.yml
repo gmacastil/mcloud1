@@ -24,6 +24,7 @@ spec:
         volumeMounts:
         - name: config-json
           mountPath: /
+          subPath: data.json
       
       volumes:
       - name: config-json
