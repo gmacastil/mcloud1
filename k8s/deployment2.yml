@@ -23,7 +23,7 @@ spec:
             name: micro3-cfg
         volumeMounts:
         - name: config-json
-          mountPath: /archivo.json
+          mountPath: /
       
       volumes:
       - name: config-json
