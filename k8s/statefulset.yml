@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: micro-stfs
+  namespace: sabado
+spec:
+  replicas: 1
+  serviceName: micro-stfs
+  selector:
+    matchLabels:
+      app: micro-stfs
+  template:
+    metadata:
+      labels:
+        app: micro-stfs
+    spec:
+      containers:
+      - name: micro-stfs
+        image: mauron/mcloud1:2a
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: micro3-cfg
+
