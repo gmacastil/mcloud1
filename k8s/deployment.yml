@@ -20,6 +20,6 @@ spec:
         - containerPort: 8080
         env:
         - name: ENV
-          value: "desarrollo"
+          value: "pre-prod"
         - name: HOST
-          value: "desarrollo"
+          value: "nodeport"
