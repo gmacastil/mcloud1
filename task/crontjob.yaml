@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: mi-task
+spec:
+  schedule: "0 12 * * *"  # Programado para las 6:00 am cada día
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: mi-task
+            image: mauron/task:1
+          restartPolicy: OnFailure
+

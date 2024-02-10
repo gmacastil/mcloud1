@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: micro3
+  name: mcloud1
   namespace: sabado
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: micro3
+      app: mcloud1
   template:
     metadata:
       labels:
-        app: micro3
+        app: mcloud1
     spec:
       containers:
-      - name: micro3
+      - name: mcloud1
         image: mauron/mcloud1:2a
         ports:
         - containerPort: 8080
         envFrom:
         - configMapRef:
-            name: micro3-cfg
+            name: mcloud1-cfg
         volumeMounts:
         - name: config-json
           mountPath: /data
@@ -29,4 +29,4 @@ spec:
       volumes:
       - name: config-json
         configMap:
-           name: micro3-cfg
+           name: mcloud1-cfg

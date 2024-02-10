@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: micro-stfs
+  name: mcloud1-stfs
   namespace: sabado
 spec:
   replicas: 1
-  serviceName: micro-stfs
+  serviceName: mcloud1-stfs
   selector:
     matchLabels:
-      app: micro-stfs
+      app: mcloud1-stfs
   template:
     metadata:
       labels:
-        app: micro-stfs
+        app: mcloud1-stfs
     spec:
       containers:
-      - name: micro-stfs
+      - name: mcloud1-stfs
         image: mauron/mcloud1:2a
         ports:
         - containerPort: 8080
         envFrom:
         - configMapRef:
-            name: micro3-cfg
+            name: mcloud13-cfg
         volumeMounts:
-        - name: pvc-micro
+        - name: pvc-mcloud1
           mountPath: /vol
     
       volumes:
-      - name: pvc-micro
+      - name: pvc-mcloud1
         persistentVolumeClaim:
           claimName: local-pvc

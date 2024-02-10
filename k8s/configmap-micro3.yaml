@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-   name: micro3-cfg
+   name: mcloud1-cfg
    namespace: sabado
 data:
    ENV: "pre-prod"

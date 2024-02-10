@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  micro1:
+  mcloud1:
     image: mauron/mcloud1:2a
     container_name: micro1
     ports:
