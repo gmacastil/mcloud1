@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mcloud1
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mcloud1
+  template:
+    metadata:
+      labels:
+        app: mcloud1
+    spec:
+      containers:
+      - name: mcloud1
+        image: sabadodev.azurecr.io/mcloud1:2a
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ENV
+          valueFrom:
+            configMapKeyRef:
+              name: mcloud1-cfg
+              key: "ENV"
+        - name: HOST
+          valueFrom:
+            configMapKeyRef:
+              name: mcloud1-cfg
+              key: "HOST"
+        - name: TZ
+          valueFrom:
+            configMapKeyRef:
+              name: mcloud1-cfg
+              key: "TZ"
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "250m"
+          limits:
+            memory: "256Mi"
+            cpu: "400m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 120
+          periodSeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 120
+          periodSeconds: 3            
+

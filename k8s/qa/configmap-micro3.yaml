@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+   name: mcloud1-cfg
+   namespace: qa
+data:
+   ENV: "qa"
+   HOST: "172.18.25.23"
+   TZ: "America/Bogota"
+   
+   data.json: |
+     {
+       "ciudad": "lima",
+       "curso": "k3s"
+     }
