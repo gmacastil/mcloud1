@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: mcloud1
+  description: Microservice on charge of load user orders
+  annotations:
+    github.com/project-slug: gmacastil/mcloud1
+spec:
+  type: service
+  owner: Backstage
+  lifecycle: production
+  system: producto-digital
