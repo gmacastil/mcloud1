@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
       - name: mcloud1
-        image: sabadodev.azurecr.io/mcloud1:2a
+        image: nginx
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         env:
         - name: ENV
           valueFrom:
